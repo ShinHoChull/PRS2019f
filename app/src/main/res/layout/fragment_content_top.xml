@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ctop"
+            type="com.m2comm.prs2019f.views.ContentTop"/>
+    </data>
+
+    <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color_darkblack"
+        app:h="50">
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:id="@+id/ctop_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="2019 춘계학술대회"
+                app:fontType="condensed"
+                app:fontSize="19"
+                android:textColor="@color/main_color_white"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/ctop_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="50"
+                app:h="50"
+                app:img="@drawable/btn_d_menu1"
+                app:imgDefaultColor="@android:color/white"
+                app:imgW="40"
+                app:imgH="40"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/top_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="40"
+                app:h="50"
+                android:layout_gravity="right"
+                app:img="@drawable/btn_d_search1"
+                app:imgW="40"
+                app:imgH="40"
+                />
+
+
+
+
+    </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+
+
+
+</layout>

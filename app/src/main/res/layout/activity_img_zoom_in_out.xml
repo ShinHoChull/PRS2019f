@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.m2comm.prs2019f.views.Img_ZoomInOut"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/Zoom_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+
+        <com.m2comm.prs2019f.modules.customview.CustomImgView
+            android:id="@+id/photo_detail_close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="right"
+            android:src="@drawable/btn_d_closed1"
+            app:imgDefaultColor="@color/main_color_black"
+            app:img="@drawable/btn_d_closed1"/>
+
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:id="@+id/photo_detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:textColor="@color/main_color_black"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:layout_gravity="left"
+            app:isPhoto="true"
+            app:fontSize="16"
+            />
+
+        <com.m2comm.prs2019f.modules.customview.CustomImgView
+            android:id="@+id/photo_detail_back"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/btn_d_back1"
+            app:img="@drawable/btn_d_back1"
+            android:background="@color/main_color_navy"
+            android:alpha="0.77"
+            />
+
+        <com.m2comm.prs2019f.modules.customview.CustomImgView
+            android:id="@+id/photo_detail_next"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/btn_d_next1"
+            app:img="@drawable/btn_d_next1"
+            android:background="@color/main_color_navy"
+            android:alpha="0.77"
+            />
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:id="@+id/photo_detail_bottomV"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            >
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/heartV"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/photo_detail_heart"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:text="@string/heart"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/main_color_RED"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:id="@+id/photo_detail_heart_text"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:text="0 Like"
+                    android:textColor="@color/main_color_black"
+                    android:textSize="15dp"
+                    />
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/saveV"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/photo_detail_download"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:text="@string/download"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:id="@+id/photo_detail_download_text"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Save"
+                    android:textColor="@color/main_color_black"
+                    android:textSize="15dp"
+                    />
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:id="@+id/detail_delete"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/photo_detail_trash"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:text="@string/trash_alt"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/main_color_RED"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Delete"
+                    android:textColor="@color/main_color_black"
+                    android:textSize="15dp"
+                    />
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/circleView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            CircleProgressView:cpv_autoTextSize="true"
+            CircleProgressView:cpv_barColor="@color/main_color_darkgray"
+            CircleProgressView:cpv_barWidth="10dp"
+            CircleProgressView:cpv_innerContourSize="0dp"
+            CircleProgressView:cpv_maxValue="100"
+            CircleProgressView:cpv_outerContourSize="0dp"
+            CircleProgressView:cpv_rimColor="@android:color/white"
+            CircleProgressView:cpv_rimWidth="10dp"
+            CircleProgressView:cpv_seekMode="true"
+            CircleProgressView:cpv_showUnit="true"
+            CircleProgressView:cpv_spinColor="@color/main_color_darkgray"
+            CircleProgressView:cpv_textColor="@color/main_color_darkgray"
+            CircleProgressView:cpv_textScale="1"
+            CircleProgressView:cpv_unit="%"
+            CircleProgressView:cpv_unitColor="@color/main_color_white"
+            CircleProgressView:cpv_unitPosition="right_top"
+            CircleProgressView:cpv_unitScale="1"
+            CircleProgressView:cpv_value="10" />
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

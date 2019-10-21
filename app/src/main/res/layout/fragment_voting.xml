@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="com.m2comm.prs2019f.views.Voting">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/voting_edge_radius"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/voting_subText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <com.m2comm.prs2019f.modules.customview.VotingButton
+                android:id="@+id/voting_bt1"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/voting_button_radius"
+                android:text="1번"
+                android:textSize="35sp"
+                app:h="70" />
+
+            <com.m2comm.prs2019f.modules.customview.VotingButton
+                android:id="@+id/voting_bt2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/voting_button_radius"
+                android:text="2번"
+                android:textSize="35sp"
+                app:h="70" />
+
+            <com.m2comm.prs2019f.modules.customview.VotingButton
+                android:id="@+id/voting_bt3"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/voting_button_radius"
+                android:text="3번"
+                android:textSize="35sp"
+                app:h="70" />
+
+            <com.m2comm.prs2019f.modules.customview.VotingButton
+                android:id="@+id/voting_bt4"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/voting_button_radius"
+                android:text="4번"
+                android:textSize="35sp"
+                app:h="70" />
+
+            <com.m2comm.prs2019f.modules.customview.VotingButton
+                android:id="@+id/voting_bt5"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/voting_button_radius"
+                android:text="5번"
+                android:textSize="35sp"
+                app:h="70" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</layout>

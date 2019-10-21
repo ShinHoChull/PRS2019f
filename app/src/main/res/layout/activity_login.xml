@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="login"
+            type="com.m2comm.prs2019f.views.LoginActivity" />
+    </data>
+
+    <com.m2comm.prs2019f.modules.customview.CustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="-30dp"
+        android:orientation="vertical">
+
+        <!--height margin-->
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:h="250">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/login_closeBt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                app:h="70"
+                app:img="@drawable/btn_d_closed1"
+                app:imgDefaultColor="@color/main_color_darkblack"
+                app:imgH="50"
+                app:imgW="50"
+                app:w="70" />
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="30" />
+
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성함"
+            android:textColor="@color/main_color_blue"
+            app:h="20"
+            app:fontType="condensed"
+            android:layout_marginLeft="20dp"
+            />
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="5" />
+
+        <com.m2comm.prs2019f.modules.customview.CustomEditText
+            android:id="@+id/login_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_borderline"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="성함을 입력해주세요"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/main_color_darkgray"
+            app:fontSize="14"
+            app:fontType="condensed"
+            app:h="50" />
+
+        <!--height margin start-->
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="13" />
+        <!--height margin end-->
+
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="면허번호"
+            android:textColor="@color/main_color_blue"
+            android:layout_marginLeft="20dp"
+            app:fontType="condensed"
+            app:h="20"/>
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="5" />
+
+        <com.m2comm.prs2019f.modules.customview.CustomEditText
+            android:id="@+id/login_pw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_borderline"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="면허번호를 입력해주세요"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/main_color_darkgray"
+            app:fontSize="14"
+            app:fontType="condensed"
+            app:h="50" />
+        <!--height margin start-->
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="13" />
+        <!--height margin end-->
+        <!--height margin end-->
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:id="@+id/lgoin_loginBt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#192e8f"
+            android:gravity="center"
+            android:text="로그인"
+            android:textColor="@android:color/white"
+            app:fontSize="14"
+            app:fontType="condensed"
+            app:h="50" />
+
+
+    </com.m2comm.prs2019f.modules.customview.CustomView>
+
+</layout>

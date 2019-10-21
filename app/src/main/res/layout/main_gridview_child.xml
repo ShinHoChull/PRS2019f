@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.m2comm.prs2019f.modules.customview.CustomView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    app:h="110"
+    app:w="110"
+    >
+    <com.m2comm.prs2019f.modules.customview.CustomView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:h="5"/>
+
+    <com.m2comm.prs2019f.modules.customview.CustomView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        app:w="110"
+        app:h="110">
+
+        <com.m2comm.prs2019f.modules.customview.CustomImgView
+            android:id="@+id/main_gridview_img"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:w="90"
+            app:h="90"/>
+
+    </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+    <com.m2comm.prs2019f.modules.customview.CustomTextView
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:id="@+id/main_gridview_text"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        app:fontType="condensed"
+        android:textColor="@color/main_color_black"
+        app:fontSize="14"
+        />
+
+</com.m2comm.prs2019f.modules.customview.CustomView>

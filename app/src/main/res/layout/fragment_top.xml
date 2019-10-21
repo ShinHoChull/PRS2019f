@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="top"
+            type="com.m2comm.prs2019f.views.Top"/>
+    </data>
+
+    <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:h="50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="5"
+                />
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/top_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="50"
+                app:h="50"
+                app:img="@drawable/ic_menu"
+                app:imgW="50"
+                app:imgH="50"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:visibility="gone"
+                android:id="@+id/top_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:w="120"
+                app:h="50"
+                app:img="@drawable/toplogo"
+                app:imgW="102"
+                app:imgH="22"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="20"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/top_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="40"
+                app:h="50"
+                app:img="@drawable/btn_cal"
+                android:visibility="gone"
+                app:imgDefaultColor="#113391"
+                app:imgW="20"
+                app:imgH="20"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="225"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/top_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="50"
+                app:h="50"
+                app:img="@drawable/ic_message"
+                app:imgW="50"
+                app:imgH="50"
+                />
+
+        </LinearLayout>
+
+
+    </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+
+
+
+</layout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.m2comm.prs2019f.modules.customview.CustomView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8C000000"
+    android:orientation="horizontal">
+
+    <com.m2comm.prs2019f.modules.customview.CustomView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:w="300">
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:orientation="horizontal"
+            app:h="41" >
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/menu_homeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                app:w="50"
+                app:h="50"
+                app:img="@drawable/btn_d_home2"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:w="170"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:id="@+id/menu_logout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/main_color_white"
+                android:visibility="gone"
+                android:text="로그아웃"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                app:fontSize="17"
+                android:background="@drawable/menu_logout_boardline"
+                app:w="70"
+                app:h="20"
+                />
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#511892"
+            app:w="300"
+            app:h="40"
+            >
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:w="150"
+                app:h="40">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:w="25"/>
+                <com.m2comm.prs2019f.modules.customview.CustomImgView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:w="20"
+                    app:h="20"
+                    app:img="@drawable/ic_schedule"
+                    android:layout_gravity="center_vertical"
+                    />
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="My Schedule"
+                    android:textColor="@color/main_color_white"
+                    app:fontSize="13"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    app:h="40"
+                    />
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                app:h="40"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/main_color_white"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:w="150"
+                app:h="40">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:w="35"/>
+                <com.m2comm.prs2019f.modules.customview.CustomImgView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:w="20"
+                    app:h="20"
+                    app:img="@drawable/ic_meno"
+                    android:layout_gravity="center_vertical"
+                    />
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="My Memo"
+                    android:textColor="@color/main_color_white"
+                    app:fontSize="13"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    app:h="40"
+                    />
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:w="300"
+            android:layout_weight="1">
+
+            <com.m2comm.prs2019f.modules.common.AnimatedExpandableListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:childDivider="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:groupIndicator="@null"
+                />
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:h="60"
+            app:w="300"
+            android:background="#347DA7">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:w="100"/>
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:w="30"
+                app:h="30"
+                app:img="@drawable/login_ic"
+                android:layout_gravity="center_vertical"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Login"
+                android:textColor="@color/main_color_white"
+                app:fontSize="18"
+                android:paddingStart="10dp"
+                android:gravity="center_vertical"
+                app:h="60"
+                />
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:visibility="gone"
+            android:id="@+id/boothBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/menu_bottom_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:h="60"
+            app:w="300">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/menu_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:w="150"
+                android:orientation="horizontal"
+                app:h="60">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:w="10"/>
+
+                <com.m2comm.prs2019f.modules.customview.CustomImgView
+                    android:id="@+id/menu_loginIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:w="60"
+                    app:h="60"
+                    app:img="@drawable/btn_d_login1"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:id="@+id/menu_loginText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="로그인"
+                    android:textColor="@color/main_color_white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    app:fontType="condensed"
+                    app:fontSize="17"
+                    app:h="60"
+                    app:w="60"/>
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/main_color_white"
+                app:h="60"
+                />
+
+
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:visibility="gone"
+                android:id="@+id/menu_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:w="150"
+                app:h="60">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:w="15"/>
+
+                <com.m2comm.prs2019f.modules.customview.CustomImgView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:w="60"
+                    app:h="60"
+                    app:img="@drawable/btn_d_setting"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정"
+                    android:textColor="@color/main_color_white"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    app:fontType="condensed"
+                    app:fontSize="17"
+                    app:h="60"
+                    app:w="60"/>
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+    </com.m2comm.prs2019f.modules.customview.CustomView>
+
+    <com.m2comm.prs2019f.modules.customview.CustomImgView
+        android:id="@+id/menu_closeBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:h="50"
+        app:img="@drawable/btn_d_closed2"
+        app:imgH="50"
+        app:imgW="50"
+        app:w="50" />
+
+</com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+
+
+
+
+
+

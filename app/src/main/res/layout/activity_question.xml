@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="main"
+            type="com.m2comm.prs2019f.views.MainActivity" />
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.m2comm.prs2019f.com.m2comm.prs2019f.views.QuestionActivity"
+        >
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            >
+
+            <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:h="49">
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Question"
+                    android:textColor="#0066DB"
+                    app:fontSize="25"
+                    app:fontType="bold"
+                    android:gravity="center"
+                    app:h="49"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomImgView
+                    android:id="@+id/question_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:w="20"
+                    app:h="30"
+                    app:img="@drawable/list_close"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="14"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="530"
+                android:background="#EBF3FC"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:h="22"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="강의중 궁금하신 내용을 질문해 주십시오"
+                    android:textColor="#000"
+                    app:fontSize="16"
+                    android:gravity="center"
+                    app:h="20"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:h="22"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_middlev_gradient"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:h="40">
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/question_sendbt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:h="40"
+                        android:gravity="center"
+                        android:text="전송"
+                        android:textColor="@color/main_color_white"
+                        app:fontType="regular"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomImgView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        app:img="@drawable/btn_d_next1"
+                        app:w="20"
+                        app:h="40"
+                        android:layout_marginRight="10dp"
+                        />
+
+                </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:h="10"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:id="@+id/question_selectboxBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:h="40"
+                    android:text="선택해 주십시오   ▼"
+                    app:fontSize="16"
+                    android:gravity="center"
+                    android:background="@drawable/list_view_borderline"
+                    android:textColor="@color/main_color_black"
+                    android:maxLines="1"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:h="10"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomEditText
+                    android:id="@+id/question_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:h="343"
+                    android:background="@drawable/list_view_borderline"
+                    android:maxLines="50"
+                    android:minLines="6"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    />
+
+
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>

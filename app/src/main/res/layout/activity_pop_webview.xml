@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.m2comm.prs2019f.modules.customview.PopWebview
+        android:id="@+id/webpop_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+    <com.m2comm.prs2019f.modules.customview.CustomImgView
+        android:id="@+id/webpop_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:h="50"
+        app:img="@drawable/btn_d_cx"
+        app:imgDefaultColor="#BDBDBD"
+        app:imgH="50"
+        app:imgW="50"
+
+        app:w="50" />
+
+</com.m2comm.prs2019f.modules.customview.CustomFrameLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.m2comm.prs2019f">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <activity android:name="com.m2comm.prs2019f.views.VotingActivity"></activity>
+        <activity android:name="com.m2comm.prs2019f.views.QuestionActivity">
+
+        </activity>
+
+        <activity android:name="com.m2comm.prs2019f.views.Lecture"
+            android:theme="@style/Theme.AppCompat.Translucent">
+        </activity>
+
+        <activity
+            android:name="com.m2comm.prs2019f.views.SettingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.m2comm.prs2019f.views.GlanceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.m2comm.prs2019f.views.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.ContentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.PopWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.Img_ZoomInOut"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor" />
+
+        <activity
+            android:name="com.m2comm.prs2019f.modules.common.Download_PDFViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.m2comm.prs2019f.modules.common.ServiceAlertActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.m2comm.prs2019f.views.MenuActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+
+        <activity android:name="com.m2comm.prs2019f.modules.common.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name="com.m2comm.prs2019f.modules.common.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.m2comm.prs2019f.modules.common.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.m2comm.prs2019f.modules.common.AlarmReceive" />
+
+    </application>
+
+</manifest>

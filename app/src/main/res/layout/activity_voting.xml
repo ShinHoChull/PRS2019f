@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.m2comm.prs2019f.views.VotingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:h="80">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:h="80">
+
+                <TextView
+                    android:id="@+id/Main_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:id="@+id/voting_closeBt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                app:h="80"
+                app:w="70"
+                app:img="@drawable/btn_d_closed1"
+                app:imgDefaultColor="@color/main_color_black"
+                app:imgH="40"
+                app:imgW="40"
+                 />
+
+        </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragmentBor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:id="@+id/main_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:horizontalSpacing="1px"
+            app:h="60" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

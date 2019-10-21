@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.m2comm.prs2019f.modules.customview.CustomFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleProgressView="http://schemas.android.com/tools">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.m2comm.prs2019f.modules.customview.CustomImgView
+        android:id="@+id/pdf_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:h="50"
+        app:img="@drawable/btn_d_closed1"
+        app:imgDefaultColor="@color/main_color_black"
+        app:imgH="50"
+        app:imgW="50"
+        app:w="50" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/pdf_circleView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        CircleProgressView:cpv_autoTextSize="true"
+        CircleProgressView:cpv_barColor="@color/main_color_darkgray"
+        CircleProgressView:cpv_barWidth="10dp"
+        CircleProgressView:cpv_innerContourSize="0dp"
+        CircleProgressView:cpv_maxValue="100"
+        CircleProgressView:cpv_outerContourSize="0dp"
+        CircleProgressView:cpv_rimColor="@android:color/white"
+        CircleProgressView:cpv_rimWidth="10dp"
+        CircleProgressView:cpv_seekMode="true"
+        CircleProgressView:cpv_showUnit="true"
+        CircleProgressView:cpv_spinColor="@color/main_color_darkgray"
+        CircleProgressView:cpv_textColor="@color/main_color_darkgray"
+        CircleProgressView:cpv_textScale="1"
+        CircleProgressView:cpv_unit="%"
+        CircleProgressView:cpv_unitColor="@color/main_color_white"
+        CircleProgressView:cpv_unitPosition="right_top"
+        CircleProgressView:cpv_unitScale="1"
+        CircleProgressView:cpv_value="10" />
+
+</com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+
+

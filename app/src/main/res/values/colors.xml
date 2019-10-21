@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="main_bt1">#1C50B4</color>
+    <color name="main_bt2">#1C8EE3</color>
+    <color name="main_bt3">#00376D</color>
+    <color name="main_bt4">#0F487D</color>
+    <color name="main_bt5">#0F2E4A</color>
+    <color name="main_bt6">#354698</color>
+
+    <color name="main_color">#3D286D</color>
+    <color name="main_color_yellow">#FFE300</color>
+    <color name="main_color_gray">#EDEDED</color>
+    <color name="main_color_darkgray">#E5E5E5</color>
+    <color name="main_color_darkblack">#2B2B2B</color>
+    <color name="main_color_navy">#2A3F62</color>
+    <color name="main_color_brown">#2C3D79</color>
+    <color name="main_color_blue">#17207B</color>
+    <color name="main_color_darkblue">#075E94</color>
+    <color name="main_color_black">#3B3B3B</color>
+    <color name="main_color_white">#FFFFFF</color>
+    <color name="menu_bottom_color">#323847</color>
+    <color name="main_color_RED">#F10F5F</color>
+    <color name="main_color_skyblue">#54ADCB</color>
+    <color name="main_color_green">#339C7F</color>
+    <color name="schadule_sat_color">#6F88FF</color>
+    <color name="schadule_sun_color">#EF6161</color>
+
+    <color name="photo_tab_click_color">#192e8f</color>
+
+    <!-- 특별한 경우 아니면 사용 X -->
+    <color name="select_border">#b8b8b8</color>
+
+    <!-- Lecture Top Color -->
+    <color name="lecture_top">#071B35</color>
+
+    <color name="menu_fold_color">#0066DB</color>
+    <color name="menu_unfold_color">#000000</color>
+
+
+</resources>

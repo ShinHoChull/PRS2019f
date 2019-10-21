@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="mixcolor" format="color" />
+        <attr name="x" format="integer" />
+        <attr name="y" format="integer" />
+        <attr name="w" format="integer" />
+        <attr name="h" format="integer" />
+        <attr name="isSchedule" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomImgView">
+        <attr name="w"/>
+        <attr name="h"/>
+        <attr name="imgW"/>
+        <attr name="imgH"/>
+        <attr name="img" format="integer"/>
+        <attr name="imgDefaultColor" format="color"/>
+        <attr name="touch" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomViewPager">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomGridView">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="w"/>
+        <attr name="h"/>
+        <attr name="isPhoto" format="boolean"/>
+        <attr name="fontSize" format="integer"/>
+        <attr name="fontType" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomListView">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="AnimatedExpandableListView">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomFrameLayout">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="w"/>
+        <attr name="h"/>
+        <attr name="fontSize"/>
+        <attr name="fontType"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomWebview">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="PopWebview">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomSpiner">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="ZoomableImageView">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomScrollView">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+    <declare-styleable name="CirView">
+        <attr name="w"/>
+        <attr name="h"/>
+        <attr name="imgDefaultColor"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="FontAsomTextView">
+        <attr name="w"/>
+        <attr name="h"/>
+        <attr name="fontSize"/>
+        <attr name="asome" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="VotingButton">
+        <attr name="w"/>
+        <attr name="h"/>
+    </declare-styleable>
+
+</resources>

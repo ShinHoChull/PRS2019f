@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="main"
+            type="com.m2comm.prs2019f.views.MainActivity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.m2comm.prs2019f.views.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/main_parentV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="-30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/main_bg"
+                android:scaleType="fitXY"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:h="5"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                    android:id="@+id/fragmentTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:h="50" />
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:h="205"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:id="@+id/main_noticeV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:h="40"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:background="@color/main_color"
+                    >
+                    <com.m2comm.prs2019f.modules.customview.CustomImgView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:w="20"
+                        app:h="20"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        app:img="@drawable/ic_notice"
+                        app:imgDefaultColor="@color/main_color_white"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/main_notiTextV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_gravity="left|center_vertical"
+                        android:text="PRS KOREA 2019 Moment of Innovation OPEN!"
+                        app:fontSize="15"
+                        app:fontType="black"
+                        android:layout_marginLeft="15dp"
+                        app:w="280"
+                        android:textColor="@color/main_color_white"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        />
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:w="360"
+                    app:h="360">
+
+                    <com.m2comm.prs2019f.modules.customview.CustomGridView
+                        android:id="@+id/main_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="3"
+                        android:overScrollMode="never"
+                        app:h="360" />
+
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:visibility="gone"
+                    android:id="@+id/fragment_Bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    app:w="360"
+                    app:h="63"/>
+
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomImgView
+                android:visibility="gone"
+                android:id="@+id/main_voting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="-10dp"
+                android:layout_gravity="right"
+                app:img="@drawable/votin_main"
+                app:w="70"
+                app:h="70"
+                />
+
+        </FrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

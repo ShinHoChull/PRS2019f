@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="photo"
+            type="com.m2comm.prs2019f.views.PhotoActivity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.m2comm.prs2019f.views.PhotoActivity">
+
+        <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color_white"
+                android:orientation="vertical">
+
+                <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                    android:id="@+id/fragment_C_Top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_navy"
+                    app:h="50" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#BF343C55"/>
+
+                <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                    android:id="@+id/fragment_S_Top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_white"
+                    app:h="36" />
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/photo_tab_borderline"
+                    android:orientation="horizontal"
+                    app:h="45">
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_select_bt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10월18일(금)"
+                        android:textColor="#555555"
+                        app:fontType="condensed"
+                        app:fontSize="13"
+                        app:h="45" />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_select_bt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10월19일(토)"
+                        android:textColor="#ffffff"
+                        android:background="@color/main_color_gray"
+                        app:fontType="condensed"
+                        app:fontSize="13"
+                        app:h="45" />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_select_bt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Apr 13\n(Sat)"
+                        android:textColor="#555555"
+                        app:fontType="condensed"
+                        app:fontSize="13"
+                        android:visibility="gone"
+                        app:h="45" />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_select_bt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="사용자 사진"
+                        android:textColor="#555555"
+                        app:fontType="condensed"
+                        app:fontSize="13"
+                        app:h="45" />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_select_bt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Photo\nZone"
+                        android:textColor="#555555"
+                        app:fontType="condensed"
+                        app:fontSize="13"
+                        android:visibility="gone"
+                        app:h="45" />
+
+
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <GridLayout
+                        android:id="@+id/photo_gridV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:orientation="horizontal"
+                        android:verticalSpacing="2dp" />
+                </ScrollView>
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:id="@+id/photo_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:h="40"/>
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/photoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:h="40"
+                android:background="#2A3F62"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:w="100"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.FontaSomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&#xf030;"
+                    app:fontSize="19"
+                    app:asome="2"
+                    app:w="30"
+                    app:h="40"
+                    android:gravity="center"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontType="condensed"
+                    android:text="Add Photo"
+                    app:fontSize="16"
+                    app:w="100"
+                    app:h="40"
+                    android:gravity="center"
+                    />
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/photo_popV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BF000000"
+                android:gravity="center"
+                >
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/photo_pop_radius"
+                    android:gravity="center"
+                    app:w="250"
+                    app:h="200"
+                    >
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Please select an upload method."
+                        android:textColor="@android:color/darker_gray"
+                        app:fontType="condensed"
+                        app:fontSize="16"
+                        app:h="49" />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/main_color_gray"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_pop_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:h="49"
+                        android:text="Camera"
+                        android:gravity="center"
+                        app:fontType="condensed"
+                        app:fontSize="15"
+                        android:textColor="@color/main_color_black"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/main_color_gray"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_pop_album"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:h="49"
+                        app:fontType="condensed"
+                        app:fontSize="15"
+                        android:text="photo album"
+                        android:gravity="center"
+                        android:textColor="@color/main_color_black"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/main_color_gray"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:id="@+id/photo_pop_cancelBt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:h="49"
+                        app:fontType="condensed"
+                        app:fontSize="15"
+                        android:text="Cancel"
+                        android:gravity="center"
+                        android:textColor="@color/main_color_black"
+                        />
+
+
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+            </RelativeLayout>
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
