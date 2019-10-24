@@ -1,20 +1,26 @@
 package com.m2comm.prs2019f.views;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.m2comm.prs2019f.R;
 import com.m2comm.prs2019f.model.TitleDTO;
+import com.m2comm.prs2019f.modules.adapters.MainBottomAdapter;
 import com.m2comm.prs2019f.modules.common.Globar;
 
-public class VotingActivity extends AppCompatActivity implements View.OnClickListener {
+public class VotingActivity extends AppCompatActivity implements View.OnClickListener , AdapterView.OnItemClickListener {
 
     private Globar g;
     private TextView main_title;
@@ -24,15 +30,21 @@ public class VotingActivity extends AppCompatActivity implements View.OnClickLis
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fm;
     private Fragment fr = null;
-    int clickPos = -1;
+    private MainBottomAdapter mba;
+    private GridView mainGridview;
 
+    int clickPos = -1;
+    int defaultPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voting);
         this.init();
-        fragmentChage(0);
+
+        fragmentChage(this.defaultPosition);
+        buttonReset(this.defaultPosition);
+
     }
 
     private void init () {
@@ -43,6 +55,16 @@ public class VotingActivity extends AppCompatActivity implements View.OnClickLis
         this.framelayout = findViewById(R.id.fragmentBor);
         this.closeBt = findViewById(R.id.voting_closeBt);
         this.closeBt.setOnClickListener(this);
+        this.mainGridview = findViewById(R.id.main_gridview);
+        this.mainGridview.setOnItemClickListener(this);
+
+        this.mba = new MainBottomAdapter(this,this.getLayoutInflater());
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        this.fragmentChage(position);
+        this.buttonReset(position);
     }
 
     //View 재설정
@@ -59,6 +81,8 @@ public class VotingActivity extends AppCompatActivity implements View.OnClickLis
         fr = r.getFragment();
         if (fr.getClass() == Voting.class) {
             ((Voting)fr).titleDTO = r;
+        } else if (fr.getClass() == FeedBack.class) {
+            ((FeedBack)fr).titleDTO = r;
         }
 
         this.fragmentTransaction = fm.beginTransaction();
@@ -78,5 +102,24 @@ public class VotingActivity extends AppCompatActivity implements View.OnClickLis
         }
 
 
+    }
+
+    private void buttonReset(int postion) {
+        //Adapter
+        this.mba.notifyDataSetChanged();
+        this.mba.clickPosition = postion;
+        this.mainGridview.setAdapter(mba);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            View v = getCurrentFocus();
+            if ( v == null) return super.dispatchTouchEvent(event);
+            InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        }
+        return super.dispatchTouchEvent(event);
     }
 }

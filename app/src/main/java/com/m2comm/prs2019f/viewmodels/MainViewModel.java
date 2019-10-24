@@ -26,8 +26,10 @@ import com.m2comm.prs2019f.modules.common.Custom_SharedPreferences;
 import com.m2comm.prs2019f.modules.common.Globar;
 import com.m2comm.prs2019f.views.ContentsActivity;
 import com.m2comm.prs2019f.views.GlanceActivity;
+import com.m2comm.prs2019f.views.New_GlanceActivity;
 import com.m2comm.prs2019f.views.PhotoActivity;
 import com.m2comm.prs2019f.views.QuestionActivity;
+import com.m2comm.prs2019f.views.VotingActivity;
 
 import java.util.Arrays;
 
@@ -77,7 +79,7 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
                 JsonParser jp = new JsonParser();
                 JsonElement je = jp.parse(response);
                 JsonArray ja = je.getAsJsonArray();
-                for (int i = 0 , j = ja.size(); i < j; i++) {
+                for (int i = 0 , j = 1; i < j; i++) {
                     JsonObject jsonObject = ja.get(i).getAsJsonObject();
                     notiStr = jsonObject.get("subject").getAsString();
                     newNotiSid = jsonObject.get("sid").getAsInt();
@@ -179,7 +181,7 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Activity a = (Activity) c;
         Intent content = new Intent(c, ContentsActivity.class);
-        int[] loginArr = {2, 4, 8};
+        int[] loginArr = {99};
         if (Arrays.binarySearch(loginArr , position) >= 0 ) {
             if ( !this.csp.getValue("isLogin",false)) {
                 this.g.loginMove(this.activity);
@@ -187,25 +189,31 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
             }
         }
 
-        if (position == 0 || position == 3 || position == 5) {
+        if (position == 0 || position == 6 ) {
             content.putExtra("content", true);
-        } else if ( position == 8 ) {
+        } else if ( position == 5 ) {
             Intent photo = new Intent(this.c, PhotoActivity.class);
-            photo.putExtra("choice","99");
+            photo.putExtra("choice","144");
             this.c.startActivity(photo);
             return;
         } else if ( position == 1 ) {
-            Intent bell = new Intent(c, GlanceActivity.class);
+            Intent bell = new Intent(c, New_GlanceActivity.class);
             a.startActivity(bell);
             a.overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left);
 
             return;
-        } /*else if (Arrays.binarySearch(loginArr, position) >= 0) {
+        } else if (position == 7) {
+            Intent voting = new Intent(c , VotingActivity.class);
+            a.startActivity(voting);
+            return;
+        }
+        /*else if (Arrays.binarySearch(loginArr, position) >= 0) {
             if (!this.csp.getValue("isLogin", false)) {
                 this.g.loginMove(this.activity);
                 return;
             }
         }*/
+
 
         content.putExtra("paramUrl", this.g.mainUrls[position]);
         c.startActivity(content);

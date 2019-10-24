@@ -30,6 +30,7 @@ import com.m2comm.prs2019f.model.TitleDTO;
 import com.m2comm.prs2019f.views.Bottom;
 import com.m2comm.prs2019f.views.ContentTop;
 import com.m2comm.prs2019f.views.ContentsActivity;
+import com.m2comm.prs2019f.views.FeedBack;
 import com.m2comm.prs2019f.views.LoginActivity;
 import com.m2comm.prs2019f.views.SubTop;
 import com.m2comm.prs2019f.views.Top;
@@ -42,12 +43,12 @@ public class Globar {
 
     public String mainUrl = "http://ezv.kr";
     public String baseUrl = "http://ezv.kr/voting/php";
-    public String contentMainUrl = "http://knpa.m2comm.co.kr";
-    public String contentUrl = "http://knpa.m2comm.co.kr/app/2019fall/php";
-    public String code = "knpa2019f";
-    public static String CONTENT_TITLE = "2019 추계학술대회";
+    public String contentMainUrl = "https://www.plasticsurgery.or.kr";
+    public String contentUrl = "https://www.plasticsurgery.or.kr/workshop/prs2019/app";
+    public String code = "PRS2019";
+    public static String CONTENT_TITLE = "PRS 2019";
     public String userCodeUrl = "http://121.254.129.104/voting_0523/insert_device.asp";
-    public String eventCode = "knpa";
+    public String eventCode = "PRS2019";
     public String voting_ip = "121.254.129.104";
     public int voting_port = 13001;
 
@@ -84,8 +85,13 @@ public class Globar {
     public TitleDTO[] titles = {
 
             new TitleDTO("VOTING", "Voting", "문제를 보시고 아래 번호를 선택해 주세요.",
-                    null, true, new Voting())
+                    null, true, new Voting()),
+            new TitleDTO("FEEDBACK", "Feedback", null,
+                    "http://ezv.kr/voting/php/feedback/view.php?code="+code, true, new FeedBack()),
     };
+
+    public int bottomBt_Default_Color = Color.parseColor("#8C8C8C");
+    public int bottomBt_Click_Color = Color.parseColor("#0054A3");
 
     public String[] votingMessage = {
             "퀴즈가 진행중이 아닙니다.",
@@ -258,20 +264,23 @@ public class Globar {
     }
 
     public String[] mainUrls = {
-            "/about/greetings.php", "/session/glance.php", "/abstract/category.php",
-            "/program/highlights.php", "/feedback/view.php?title=피드백", "/about/floor.php"
-            ,"/bbs/list.php?code="+this.code,"/booth/list.php?code="+this.code,""
+            "/about/welcome1.php", "/session/glance.php", "/session/list.php",
+            "/faculty/list.php", "/abstract/category.php", ""
+            ,"/about/location.php","","/booth/list.php"
     };
 
     public String[][] linkUrl = {
-            {"/about/greetings.php","/about/welcome.php"},
-            {"/session/glance.php?code="+this.code,"/session/list.php?tab=99&code="+this.code,"/session/list.php?tab=100&code="+this.code},
-            {"/abstract/category.php?tab=1","/abstract/category.php?tab=2"},//Faculty
-            {"/program/highlights.php"},
-            {"/feedback/view.php?title=피드백"},
-            {"/about/floor.php","/about/map.php"},
-            {"/bbs/list.php?code="+this.code},
-            {"/booth/list.php?code="+this.code},
+            {"/about/welcome1.php","/about/overview.php","/about/guest.php"},
+            {""},
+            {"/session/list.php?tab=144","/session/list.php?tab=145","/session/list.php?tab=146"},//Faculty
+            {"/faculty/list.php"},
+            {"/abstract/category.php"},
+            {""},
+            {"/about/location.php","/about/venue.php"},
+            {""},
+            {"/booth/list.php"},
+            {"/bbs/list.php"},
+
     };
 
     public HashMap<String, String> urls = new HashMap<String, String>() {

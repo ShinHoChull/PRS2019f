@@ -29,7 +29,12 @@
     <color name="schadule_sat_color">#6F88FF</color>
     <color name="schadule_sun_color">#EF6161</color>
 
-    <color name="photo_tab_click_color">#192e8f</color>
+
+    <color name="photo_tab_click_font_color">#000000</color>
+    <color name="photo_tab_click_bg_color">#ffffff</color>
+
+    <color name="photo_tab_default_font_color">#8b99c2</color>
+    <color name="photo_tab_default_bg_color">#4b619c</color>
 
     <!-- 특별한 경우 아니면 사용 X -->
     <color name="select_border">#b8b8b8</color>

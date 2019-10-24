@@ -12,7 +12,7 @@
     <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/main_color_darkblack"
+        android:background="@color/main_color"
         app:h="50">
 
             <com.m2comm.prs2019f.modules.customview.CustomTextView

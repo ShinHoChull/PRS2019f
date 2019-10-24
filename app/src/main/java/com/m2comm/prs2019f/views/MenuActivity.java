@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.StringRequestListener;
 import com.m2comm.prs2019f.R;
 import com.m2comm.prs2019f.modules.common.AnimatedExpandableListView;
 import com.m2comm.prs2019f.modules.common.Custom_SharedPreferences;
@@ -32,11 +37,11 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private Globar g;
 
     private LinearLayout boothBt , menuBt , menuLogin ;
-    private ImageView closeBt, menu_homeImg , loginIcon;
+    private ImageView closeBt, menu_homeImg , loginIcon , menubell;
     private TextView loginText , logout;
 
-
     private Custom_SharedPreferences csp;
+    private String defaultBellState = "Y";
 
     private void listenerRegister() {
 
@@ -46,6 +51,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         this.menuBt.setOnClickListener(this);
         this.menuLogin.setOnClickListener(this);
         this.logout.setOnClickListener(this);
+        this.menubell.setOnClickListener(this);
     }
 
     private void init() {
@@ -61,21 +67,21 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         this.loginText = findViewById(R.id.menu_loginText);
         this.logout = findViewById(R.id.menu_logout);
 
-
+        this.menubell = findViewById(R.id.menubell);
         this.listenerRegister();
 
         this.header = new ArrayList<>();
 
         header.add(new GroupItem(R.drawable.side_m_1, "PRS KOREA 2019",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  인사말"), new ChildItem("•  환영연")))));
+                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Welcome Message"), new ChildItem("•  Overview") ,
+                        new ChildItem("•  Guest Nations")))));
 
         header.add(new GroupItem(R.drawable.side_m_2, "Program at a glance",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Program at a Glance"),
-                        new ChildItem("•  10월18일(금)")
-                        , new ChildItem("•  10월19일(토)")))));
+                new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_3, "Day Program",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  포맷별"), new ChildItem("•  주제별")))));
+                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Nov. 8 (Fri)"),
+                        new ChildItem("•  Nov. 9 (Sat)"),new ChildItem("•  Nov. 10 (Sun)")))));
 
         header.add(new GroupItem(R.drawable.side_m_4, "Invited Speakers",
                 new ArrayList<ChildItem>()));
@@ -84,24 +90,19 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_6, "Photo Gallery",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  대회장 안내"), new ChildItem("•  오시는 길")
-                ))));
+                new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_7, "Location / Venue",
                 new ArrayList<ChildItem>()));
 
-        header.add(new GroupItem(R.drawable.side_m_8, "Question / Feedback",
+        header.add(new GroupItem(R.drawable.main_ico_8, "Question / Feedback",
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_9, "Sponsors",
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_10, "Notice",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Plenary Speakers"),
-                        new ChildItem("•  Invited Speakers"),
-                        new ChildItem("•  Symposium Speakers"),
-                        new ChildItem("•  Traveling Fellows")
-                ))));
+                new ArrayList<ChildItem>()));
 
         if (this.csp.getValue("sid","").equals("")) {
             this.loginIcon.setImageResource(R.drawable.btn_d_login1);
@@ -110,6 +111,48 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             this.loginIcon.setImageResource(R.drawable.btn_d_fav_off1);
             this.loginText.setText("즐겨찾기");
             this.logout.setVisibility(View.VISIBLE);
+        }
+
+
+        //현재 알림 상태 가져오기
+        this.pushBell_StateChange("getPush");
+    }
+
+    private void pushBell_StateChange(final String keyName) {
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                Log.d("bellUrl",g.baseUrl + g.urls.get(keyName));
+                AndroidNetworking.post(g.baseUrl + g.urls.get(keyName))
+                        .addBodyParameter("val",defaultBellState)
+                        .addBodyParameter("code",g.code)
+                        .addBodyParameter("deviceid",csp.getValue("deviceid",""))
+                        .setPriority(Priority.MEDIUM)
+                        .build().getAsString(new StringRequestListener() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("push_response",response);
+                        defaultBellState = response;
+                        pushBellImgChange(response);
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+
+                        Log.d("pushError",anError.toString());
+
+                    }
+                });
+            }
+        }.start();
+    }
+
+    private void pushBellImgChange(String yn) {
+        if ( yn.equals("Y") ) {
+            this.menubell.setImageDrawable(getResources().getDrawable(R.drawable.alarm_on));
+        } else {
+            this.menubell.setImageDrawable(getResources().getDrawable(R.drawable.alarm_off));
         }
     }
 
@@ -320,6 +363,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
+
+            case R.id.menubell:
+                Log.d("bellClick","click");
+
+                this.defaultBellState = this.defaultBellState.equals("Y")? "N" : "Y";
+                this.pushBell_StateChange("setPush");
+                break;
+
             case R.id.menu_homeImg:
                 Intent main = new Intent(this, MainActivity.class);
                 main.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -375,30 +426,25 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private void moveView(int groupPostion, int childPosition) {
 
-        if (groupPostion == 1 && childPosition == 0) {
-            Intent glance = new Intent(this, GlanceActivity.class);
+        if (groupPostion == 1 ) {
+            Intent glance = new Intent(this, New_GlanceActivity.class);
             startActivity(glance);
             overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left);
             finish();
             return;
-        } else if ( groupPostion == 2 || groupPostion == 4 ) {
-            if (!this.csp.getValue("isLogin",false)) {
-                this.g.loginMove(this);
-                return;
-            }
-        } else if (groupPostion == 8) {
-            if (!this.csp.getValue("isLogin",false)) {
-                this.g.loginMove(this);
-                return;
-            }
+        }  else if (groupPostion == 5) {
             Intent photo = new Intent(this, PhotoActivity.class);
-            photo.putExtra("choice","99");
+            photo.putExtra("choice","144");
             this.startActivity(photo);
+            return;
+        } else if (groupPostion == 7) {
+            Intent voting = new Intent(this , VotingActivity.class);
+            startActivity(voting);
             return;
         }
 
         Intent content = new Intent(this, ContentsActivity.class);
-        if (groupPostion == 0 || groupPostion == 3 || groupPostion == 5 || groupPostion == 9 ) {
+        if (groupPostion == 0 || groupPostion == 6 ) {
             content.putExtra("content", true);
         }
         content.putExtra("paramUrl", this.g.linkUrl[groupPostion][childPosition]);

@@ -130,7 +130,7 @@ public class ContentsActivity extends AppCompatActivity  {
         this.viewReset();
 
         if ( this.isBottom ) {
-            this.fr.setVisibility(View.VISIBLE);
+            this.fr.setVisibility(View.GONE);
         }
     }
 

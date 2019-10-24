@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mainvm.reSetting();
+       //mainvm.reSetting();
         mainvm.tokenResume();
     }
 

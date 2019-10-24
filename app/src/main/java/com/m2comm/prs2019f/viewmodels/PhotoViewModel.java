@@ -86,17 +86,17 @@ public class PhotoViewModel implements View.OnClickListener {
 
     private void photoColorReset() {
         this.isSketch = true;
-        this.activity.photoSelectBt1.setBackgroundColor(this.c.getResources().getColor(R.color.main_color_white));
-        this.activity.photoSelectBt2.setBackgroundColor(this.c.getResources().getColor(R.color.main_color_white));
-        this.activity.photoSelectBt3.setBackgroundColor(this.c.getResources().getColor(R.color.main_color_white));
-        this.activity.photoSelectBt4.setBackgroundColor(this.c.getResources().getColor(R.color.main_color_white));
-        this.activity.photoSelectBt5.setBackgroundColor(this.c.getResources().getColor(R.color.main_color_white));
+        this.activity.photoSelectBt1.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_default_bg_color));
+        this.activity.photoSelectBt2.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_default_bg_color));
+        this.activity.photoSelectBt3.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_default_bg_color));
+        this.activity.photoSelectBt4.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_default_bg_color));
+        this.activity.photoSelectBt5.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_default_bg_color));
 
-        this.activity.photoSelectBt1.setTextColor(this.c.getResources().getColor(R.color.main_color_black));
-        this.activity.photoSelectBt2.setTextColor(this.c.getResources().getColor(R.color.main_color_black));
-        this.activity.photoSelectBt3.setTextColor(this.c.getResources().getColor(R.color.main_color_black));
-        this.activity.photoSelectBt4.setTextColor(this.c.getResources().getColor(R.color.main_color_black));
-        this.activity.photoSelectBt5.setTextColor(this.c.getResources().getColor(R.color.main_color_black));
+        this.activity.photoSelectBt1.setTextColor(this.c.getResources().getColor(R.color.photo_tab_default_font_color));
+        this.activity.photoSelectBt2.setTextColor(this.c.getResources().getColor(R.color.photo_tab_default_font_color));
+        this.activity.photoSelectBt3.setTextColor(this.c.getResources().getColor(R.color.photo_tab_default_font_color));
+        this.activity.photoSelectBt4.setTextColor(this.c.getResources().getColor(R.color.photo_tab_default_font_color));
+        this.activity.photoSelectBt5.setTextColor(this.c.getResources().getColor(R.color.photo_tab_default_font_color));
         this.activity.photoGridV.removeAllViews();
         this.activity.photoButton.setVisibility(View.GONE);
         this.activity.photoBottom.setVisibility(View.GONE);
@@ -115,19 +115,21 @@ public class PhotoViewModel implements View.OnClickListener {
         this.csp = new Custom_SharedPreferences(this.c);
         this.customHandler = new CustomHandler(this.c);
         this.g.addFragment_Content_TopV(this.c,false);
-        this.g.addFragment_Sub_TopV(this.c, "포토갤러리");
+        this.g.addFragment_Sub_TopV(this.c, "Photo Gallery");
         this.listenerRegister();
 
         this.activity.photoGridV.setColumnCount(4);
         this.photoColorReset();
-        this.strUrl = this.strUrl.equals("") ? "99" : this.strUrl ;
-        if ( this.strUrl.equals("99") ) {
-            this.activity.photoSelectBt1.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
-            this.activity.photoSelectBt1.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-        } else {
-            this.activity.photoSelectBt2.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
-            this.activity.photoSelectBt2.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
+        this.strUrl = this.strUrl.equals("") ? "144" : this.strUrl ;
+        if ( this.strUrl.equals("144") ) {
+            this.activity.photoSelectBt1.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
+            this.activity.photoSelectBt1.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+            this.getPhotoUrl("144");
+        }  else {
+            this.activity.photoSelectBt2.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
+            this.activity.photoSelectBt2.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
         }
+
     }
 
     public void photoUpdate() {
@@ -348,10 +350,10 @@ public class PhotoViewModel implements View.OnClickListener {
                 }
                 photoColorReset();
                 TextView tv1 = (TextView) v;
-                tv1.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-                tv1.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
-                this.strUrl = "99";
-                this.getPhotoUrl("99");
+                tv1.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+                tv1.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
+                this.strUrl = "144";
+                this.getPhotoUrl("144");
                 break;
 
             case R.id.photo_select_bt2:
@@ -360,10 +362,10 @@ public class PhotoViewModel implements View.OnClickListener {
                 }
                 photoColorReset();
                 TextView tv2 = (TextView) v;
-                tv2.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-                tv2.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
-                this.strUrl = "100";
-                this.getPhotoUrl("100");
+                tv2.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+                tv2.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
+                this.strUrl = "145";
+                this.getPhotoUrl("145");
                 break;
 
             case R.id.photo_select_bt3:
@@ -372,10 +374,10 @@ public class PhotoViewModel implements View.OnClickListener {
                 }
                 photoColorReset();
                 TextView tv3 = (TextView) v;
-                tv3.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-                tv3.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
-                this.strUrl = "41";
-                this.getPhotoUrl("41");
+                tv3.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+                tv3.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
+                this.strUrl = "146";
+                this.getPhotoUrl("146");
                 break;
 
             case R.id.photo_select_bt5:
@@ -384,8 +386,8 @@ public class PhotoViewModel implements View.OnClickListener {
                 }
                 photoColorReset();
                 TextView tv4 = (TextView) v;
-                tv4.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-                tv4.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
+                tv4.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+                tv4.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
                 this.strUrl = "-2";
                 this.getPhotoUrl("-2");
                 break;
@@ -398,8 +400,8 @@ public class PhotoViewModel implements View.OnClickListener {
                 this.activity.photoButton.setVisibility(View.VISIBLE);
                 this.activity.photoBottom.setVisibility(View.VISIBLE);
                 TextView tv5 = (TextView) v;
-                tv5.setTextColor(this.c.getResources().getColor(R.color.main_color_white));
-                tv5.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_color));
+                tv5.setTextColor(this.c.getResources().getColor(R.color.photo_tab_click_font_color));
+                tv5.setBackgroundColor(this.c.getResources().getColor(R.color.photo_tab_click_bg_color));
                 this.strUrl = "-1";
                 this.getPhotoUrl("-1");
 

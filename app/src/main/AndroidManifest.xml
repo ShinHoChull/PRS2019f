@@ -24,8 +24,9 @@
 
         <activity android:name="com.m2comm.prs2019f.views.VotingActivity"></activity>
         <activity android:name="com.m2comm.prs2019f.views.QuestionActivity">
-
         </activity>
+
+        <activity android:name=".views.New_GlanceActivity"></activity>
 
         <activity android:name="com.m2comm.prs2019f.views.Lecture"
             android:theme="@style/Theme.AppCompat.Translucent">
