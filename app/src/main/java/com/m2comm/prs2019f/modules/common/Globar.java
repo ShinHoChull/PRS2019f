@@ -85,13 +85,8 @@ public class Globar {
     public TitleDTO[] titles = {
 
             new TitleDTO("VOTING", "Voting", "문제를 보시고 아래 번호를 선택해 주세요.",
-                    null, true, new Voting()),
-            new TitleDTO("FEEDBACK", "Feedback", null,
-                    "http://ezv.kr/voting/php/feedback/view.php?code="+code, true, new FeedBack()),
+                    null, true, new Voting())
     };
-
-    public int bottomBt_Default_Color = Color.parseColor("#8C8C8C");
-    public int bottomBt_Click_Color = Color.parseColor("#0054A3");
 
     public String[] votingMessage = {
             "퀴즈가 진행중이 아닙니다.",
