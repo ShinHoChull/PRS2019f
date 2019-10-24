@@ -10,10 +10,8 @@ import com.m2comm.prs2019f.viewmodels.MessageViewModel;
 
 public class MessageActivity extends AppCompatActivity {
 
-
     ActivityMessageBinding binding;
     MessageViewModel mvm;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

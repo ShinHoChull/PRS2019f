@@ -36,7 +36,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private Globar g;
 
-    private LinearLayout boothBt , menuBt , menuLogin ;
+    private LinearLayout boothBt , menuBt , menuLogin , myschedule;
     private ImageView closeBt, menu_homeImg , loginIcon , menubell;
     private TextView loginText , logout;
 
@@ -52,6 +52,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         this.menuLogin.setOnClickListener(this);
         this.logout.setOnClickListener(this);
         this.menubell.setOnClickListener(this);
+        this.myschedule.setOnClickListener(this);
     }
 
     private void init() {
@@ -66,6 +67,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         this.loginIcon = findViewById(R.id.menu_loginIcon);
         this.loginText = findViewById(R.id.menu_loginText);
         this.logout = findViewById(R.id.menu_logout);
+        this.myschedule = findViewById(R.id.menu_myschedule);
 
         this.menubell = findViewById(R.id.menubell);
         this.listenerRegister();
@@ -95,7 +97,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         header.add(new GroupItem(R.drawable.side_m_7, "Location / Venue",
                 new ArrayList<ChildItem>()));
 
-        header.add(new GroupItem(R.drawable.main_ico_8, "Question / Feedback",
+        header.add(new GroupItem(R.drawable.side_m_8, "Question / Feedback",
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_9, "Sponsors",
@@ -363,6 +365,12 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
+
+            case R.id.menu_myschedule:
+                Intent myschedule = new Intent(this, ContentsActivity.class);
+                myschedule.putExtra("paramUrl", this.g.urls.get("fav"));
+                startActivity(myschedule);
+                break;
 
             case R.id.menubell:
                 Log.d("bellClick","click");

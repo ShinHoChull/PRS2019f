@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m2comm.prs2019f.modules.customview.CustomView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    app:h="30">
+
+    <com.m2comm.prs2019f.modules.customview.CustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="22dp"
+            android:id="@+id/textTitle"
+            android:textColor="#444444"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fontType="condensed"
+            app:fontSize="18"
+            app:w="180"/>
+
+        <com.m2comm.prs2019f.modules.customview.CustomTextView
+            android:id="@+id/messageImg"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:fontType="black"
+            app:fontSize="17"
+            app:w="50"
+            app:h="50"
+            app:imgDefaultColor="@android:color/darker_gray"
+            />
+    </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+
+</com.m2comm.prs2019f.modules.customview.CustomView>

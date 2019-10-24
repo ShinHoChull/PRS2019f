@@ -16,9 +16,6 @@ public class Message_main_Fragment extends Fragment {
 
     private FragmentMessageMainBinding binding;
 
-
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

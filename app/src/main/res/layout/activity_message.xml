@@ -17,22 +17,24 @@
 
 
             <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/fragment_C_Top"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/main_color_blue"
-                app:h="60" />
+                android:background="@color/main_color_white"
+                app:h="50" />
 
             <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/fragment_S_Top"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/main_color_darkblack"
-                app:h="40" />
+                android:background="@color/main_color_white"
+                app:h="36" />
 
             <com.m2comm.prs2019f.modules.customview.CustomView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@color/main_color_black"
+                android:background="@color/main_color_white"
                 app:h="50">
 
                 <com.m2comm.prs2019f.modules.customview.CustomTextView

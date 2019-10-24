@@ -13,7 +13,7 @@
     <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/main_color_green"
+        android:background="@color/main_color_white"
         >
 
 
@@ -53,32 +53,67 @@
 
             </com.m2comm.prs2019f.modules.customview.CustomView>
 
-
-            <com.m2comm.prs2019f.modules.customview.CustomTextView
+            <com.m2comm.prs2019f.modules.customview.CustomView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:h="40"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical"
-                android:text="ON"
-                android:textColor="#3d286d"
-                android:background="#F5F4FA"
-                app:fontSize="18"
-                />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-            <com.m2comm.prs2019f.modules.customview.CustomTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:h="40"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical"
-                android:text="OFF"
-                android:textColor="@color/main_color_black"
-                android:background="#E8E8E8"
-                app:fontSize="18"
-                />
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:h="40"
+                        android:paddingLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="ON"
+                        android:textColor="#3d286d"
+                        android:background="#F5F4FA"
+                        app:fontSize="18"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomListView
+                        android:id="@+id/message_on_listv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.m2comm.prs2019f.modules.customview.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:h="40"
+                        android:paddingLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="OFF"
+                        android:textColor="@color/main_color_black"
+                        android:background="#E8E8E8"
+                        app:fontSize="18"
+                        />
+
+                    <com.m2comm.prs2019f.modules.customview.CustomListView
+                        android:id="@+id/message_off_listv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                </com.m2comm.prs2019f.modules.customview.CustomView>
 
 
+            </com.m2comm.prs2019f.modules.customview.CustomView>
 
         </com.m2comm.prs2019f.modules.customview.CustomView>
 

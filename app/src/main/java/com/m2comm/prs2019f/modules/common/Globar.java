@@ -293,7 +293,7 @@ public class Globar {
             put("program", "/session/list.php");
             put("schedule", "/program/favorite.php");
             put("search", "/session/list.php?tab=-3&code="+code);
-            put("fav","/session/list.php?tab=-2&code="+code);
+            put("fav","/session/list.php?tab=-2");
             put("getNoti", "/bbs/get_list.php");
             put("notiView","/bbs/view.php");
             put("mySchedule", "/session/list.php?tab=-2&code="+code);

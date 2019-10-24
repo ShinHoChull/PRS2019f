@@ -32,6 +32,10 @@
             android:theme="@style/Theme.AppCompat.Translucent">
         </activity>
 
+        <activity android:name=".views.MessageActivity">
+
+        </activity>
+
         <activity
             android:name="com.m2comm.prs2019f.views.SettingActivity"
             android:screenOrientation="portrait"></activity>

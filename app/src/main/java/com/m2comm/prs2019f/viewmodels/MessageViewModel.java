@@ -46,6 +46,8 @@ public class MessageViewModel implements View.OnClickListener {
     private void init() {
         this.csp = new Custom_SharedPreferences(this.c);
         this.g = new Globar(this.c);
+        this.g.addFragment_Content_TopV(this.c,true);
+        this.g.addFragment_Sub_TopV(this.c,"Message");
         this.registObjs();
         this.buttonChange(this.defaultBt);
         this.fragmentChange(this.defaultBt);

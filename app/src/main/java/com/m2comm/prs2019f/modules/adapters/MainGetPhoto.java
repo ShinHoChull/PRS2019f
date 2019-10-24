@@ -57,7 +57,7 @@ public class MainGetPhoto extends BaseAdapter {
             convertView = this.inflater.inflate(R.layout.main_getphoto,parent,false);
             ImageView img = convertView.findViewById(R.id.getMainPhoto_img);
 
-            Picasso.get().load(this.g.urls.get("photo")+r.getUrl()).resize(this.g.w(100),0).placeholder(R.drawable.placeholder).error(R.mipmap.ic_launcher).into(img);
+            Picasso.get().load(this.g.urls.get("photo")+r.getUrl()).resize(this.g.w(100),0).error(R.mipmap.ic_launcher).into(img);
 
             ViewGroup.LayoutParams param = convertView.getLayoutParams();
             if(param == null) {

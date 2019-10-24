@@ -2,11 +2,14 @@ package com.m2comm.prs2019f.modules.customview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Point;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.WindowManager;
 
 import com.m2comm.prs2019f.R;
@@ -16,8 +19,6 @@ public class CustomTextView extends AppCompatTextView {
 
     private int x,y,w,h;
     private Context a;
-
-    private WindowManager wm;
 
     public int deviceW = 0;
     public int deviceH = 0;
@@ -29,9 +30,7 @@ public class CustomTextView extends AppCompatTextView {
 
     private void initView(Context c , AttributeSet a) {
         this.a = c;
-        wm = (WindowManager) c.getSystemService(c.WINDOW_SERVICE);
-        this.deviceW = this.getDeviceW();
-        this.deviceH = this.getDeviceH();
+        this.init();
 
         TypedArray t = c.obtainStyledAttributes(a, R.styleable.CustomTextView);
 
@@ -81,18 +80,26 @@ public class CustomTextView extends AppCompatTextView {
         setMeasuredDimension(widthMeasureSpec,heightMeasureSpec);
     }
 
-    private DisplayMetrics dM() {
-        DisplayMetrics dm = new DisplayMetrics();
-        this.wm.getDefaultDisplay().getMetrics(dm);
-        return dm;
-    }
+    private void init() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) this.a.getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay().getMetrics(displayMetrics);
 
-    private int getDeviceW() {
-        return this.dM().widthPixels;
-    }
 
-    private int getDeviceH() {
-        return this.dM().heightPixels - this.getStatusBarHeight();
+
+        WindowManager windowManager = (WindowManager)this.a.getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
+        int statusheight = this.getStatusBarHeight();
+
+        if ( Build.MODEL.equals("SM-G973N") || Build.MODEL.equals("SM-G977N") || Build.MODEL.equals("SM-N971N") ) {
+            statusheight = 0;
+        }
+
+        this.deviceW = size.x;
+        this.deviceH = size.y - statusheight;
     }
 
     private int getStatusBarHeight() {

@@ -132,7 +132,7 @@ public class Img_ZoomInOut extends AppCompatActivity implements View.OnClickList
 
         mCircleView.setVisibility(View.VISIBLE);
         this.mCircleView.spin();
-        Picasso.get().load(this.g.mainUrl+"/voting/upload/photo/"+this.url).resize(this.g.w(360), 0).placeholder(R.drawable.placeholder).error(R.mipmap.ic_launcher).into(img, new Callback() {
+        Picasso.get().load(this.g.mainUrl+"/voting/upload/photo/"+this.url).resize(this.g.w(360), 0).error(R.mipmap.ic_launcher).into(img, new Callback() {
             @Override
             public void onSuccess() {
                 mCircleView.stopSpinning();

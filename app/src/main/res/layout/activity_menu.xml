@@ -79,6 +79,7 @@
             app:h="40"
             >
             <com.m2comm.prs2019f.modules.customview.CustomView
+                android:id="@+id/menu_myschedule"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

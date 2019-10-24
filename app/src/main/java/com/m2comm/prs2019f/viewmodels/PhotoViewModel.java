@@ -201,7 +201,7 @@ public class PhotoViewModel implements View.OnClickListener {
 
             params.width = w;
             params.height = h;
-            Picasso.get().load(this.g.mainUrl + "/voting/upload/photo/" + r.getUrl()).resize(w, h).placeholder(R.drawable.placeholder).error(R.drawable.placeholder).into(iv2);
+            Picasso.get().load(this.g.mainUrl + "/voting/upload/photo/" + r.getUrl()).resize(w, h).error(R.mipmap.ic_launcher).into(iv2);
 
 //            if (i >= tempIndex) {
 //                //마지막 포토 리스트를 뿌릴때 균일하게 작업이 되지 않을때를 대비한 작업
