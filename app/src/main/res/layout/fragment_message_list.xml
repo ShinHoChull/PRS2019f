@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.m2comm.prs2019f.views.Message_list_Fragment" />
+    </data>
+
+
+    <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color_brown"
+        >
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E8E8E8"
+                android:orientation="horizontal"
+                app:h="40">
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:w="50"
+                    app:h="40"
+                    android:gravity="center"
+                    android:textColor="@color/main_color_black"
+                    app:fontSize="14"
+                    android:text="Date"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:h="40"
+                    android:text="Message confirmation"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/main_color_black"
+                    app:fontSize="14"
+                    android:layout_weight="1"/>
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/main_color_black"
+                    android:text="Reply"
+                    android:gravity="center"
+                    app:fontSize="14"
+                    app:w="50"
+                    app:h="40"/>
+
+
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+
+
+
+    </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+</layout>

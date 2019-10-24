@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.MessageActivity">
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color_blue"
+                app:h="60" />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color_darkblack"
+                app:h="40" />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/main_color_black"
+                app:h="50">
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:id="@+id/message_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="List"
+                    app:fontSize="18"
+                    app:fontType="bold"
+                    android:gravity="center"
+                    android:background="@color/main_color_black"
+                    android:textColor="@color/main_color_white"
+                    app:h="50"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:id="@+id/message_ms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Message"
+                    android:gravity="center"
+                    app:fontSize="18"
+                    android:background="@color/main_color_black"
+                    android:textColor="@color/main_color_white"
+                    app:h="50"
+                    app:fontType="bold"/>
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+            <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                android:id="@+id/messageFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color_black"
+                android:layout_weight="1"/>
+
+
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.m2comm.prs2019f.views.MessageActivity" />
+
+    </data>
+
+</layout>

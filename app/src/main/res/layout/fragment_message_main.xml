@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.m2comm.prs2019f.views.Message_list_Fragment" />
+    </data>
+
+
+    <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color_green"
+        >
+
+
+        <com.m2comm.prs2019f.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="40"
+                android:orientation="horizontal">
+
+                <com.m2comm.prs2019f.modules.customview.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:h="40"
+                    android:background="@color/main_color_white"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/main_color_black"
+                    android:textColorHint="@color/main_color_black"
+                    />
+
+                <com.m2comm.prs2019f.modules.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Search"
+                    android:textColor="@color/main_color_white"
+                    android:background="#414141"
+                    app:w="60"
+                    app:h="40"/>
+
+
+            </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="40"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="ON"
+                android:textColor="#3d286d"
+                android:background="#F5F4FA"
+                app:fontSize="18"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="40"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="OFF"
+                android:textColor="@color/main_color_black"
+                android:background="#E8E8E8"
+                app:fontSize="18"
+                />
+
+
+
+        </com.m2comm.prs2019f.modules.customview.CustomView>
+
+
+
+
+
+
+    </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+</layout>
