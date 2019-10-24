@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="fq"
+            type="com.m2comm.prs2019f.views.Question"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.Question">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="#DDEFF6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qa_subText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+
+            <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
+                android:id="@+id/question_sendBt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:h="40">
+
+                <com.m2comm.prs2019f.modules.customview.CustomView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0054A3"
+                    app:h="40">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="SEND"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        />
+                </com.m2comm.prs2019f.modules.customview.CustomView>
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/btn_d_next1"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+            </com.m2comm.prs2019f.modules.customview.CustomFrameLayout>
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="10"/>
+
+            <com.m2comm.prs2019f.modules.customview.CustomTextView
+                android:id="@+id/question_selectboxBt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-1px"
+                app:h="40"
+                android:text="Please Select   ▼"
+                app:fontSize="16"
+                android:gravity="center"
+                android:background="@drawable/list_view_borderline"
+                android:textColor="@color/main_color_black"
+                android:maxLines="1"
+                />
+
+            <com.m2comm.prs2019f.modules.customview.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="10"/>
+
+            <EditText
+                android:id="@+id/question_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#ffffff"
+                android:gravity="top"
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:maxLines="50"
+                android:minLines="6"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+</layout>

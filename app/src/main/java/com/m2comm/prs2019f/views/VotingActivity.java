@@ -81,6 +81,8 @@ public class VotingActivity extends AppCompatActivity implements View.OnClickLis
         fr = r.getFragment();
         if (fr.getClass() == Voting.class) {
             ((Voting)fr).titleDTO = r;
+        } else if (fr.getClass() == Question.class) {
+            ((Question)fr).titleDTO = r;
         } else if (fr.getClass() == FeedBack.class) {
             ((FeedBack)fr).titleDTO = r;
         }

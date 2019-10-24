@@ -32,6 +32,7 @@ import com.m2comm.prs2019f.views.ContentTop;
 import com.m2comm.prs2019f.views.ContentsActivity;
 import com.m2comm.prs2019f.views.FeedBack;
 import com.m2comm.prs2019f.views.LoginActivity;
+import com.m2comm.prs2019f.views.Question;
 import com.m2comm.prs2019f.views.SubTop;
 import com.m2comm.prs2019f.views.Top;
 import com.m2comm.prs2019f.views.Voting;
@@ -84,8 +85,8 @@ public class Globar {
     //각 타이틀.
     public TitleDTO[] titles = {
 
-            new TitleDTO("VOTING", "Voting", "문제를 보시고 아래 번호를 선택해 주세요.",
-                    null, true, new Voting()),
+            new TitleDTO("QUESTION", "Question", "Enter your question and send.",
+                    "http://ezv.kr/voting/php/question/post.php", true, new Question()),
             new TitleDTO("FEEDBACK", "Feedback", null,
                     "http://ezv.kr/voting/php/feedback/view.php?code="+code, true, new FeedBack()),
     };

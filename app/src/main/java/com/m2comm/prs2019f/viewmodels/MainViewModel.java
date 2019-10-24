@@ -79,8 +79,8 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
                 JsonParser jp = new JsonParser();
                 JsonElement je = jp.parse(response);
                 JsonArray ja = je.getAsJsonArray();
-                for (int i = 0 , j = 1; i < j; i++) {
-                    JsonObject jsonObject = ja.get(i).getAsJsonObject();
+                if ( ja.size() > 0 ) {
+                    JsonObject jsonObject = ja.get(0).getAsJsonObject();
                     notiStr = jsonObject.get("subject").getAsString();
                     newNotiSid = jsonObject.get("sid").getAsInt();
                 }
@@ -204,6 +204,7 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
             return;
         } else if (position == 7) {
             Intent voting = new Intent(c , VotingActivity.class);
+            voting.putExtra("isQuestion",true);
             a.startActivity(voting);
             return;
         }
