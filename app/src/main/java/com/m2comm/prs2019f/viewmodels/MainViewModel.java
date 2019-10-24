@@ -28,6 +28,7 @@ import com.m2comm.prs2019f.views.ContentsActivity;
 import com.m2comm.prs2019f.views.GlanceActivity;
 import com.m2comm.prs2019f.views.PhotoActivity;
 import com.m2comm.prs2019f.views.QuestionActivity;
+import com.m2comm.prs2019f.views.VotingActivity;
 
 import java.util.Arrays;
 
@@ -180,32 +181,36 @@ public class MainViewModel implements View.OnClickListener, AdapterView.OnItemCl
         Activity a = (Activity) c;
         Intent content = new Intent(c, ContentsActivity.class);
         int[] loginArr = {2, 4, 8};
-        if (Arrays.binarySearch(loginArr , position) >= 0 ) {
-            if ( !this.csp.getValue("isLogin",false)) {
-                this.g.loginMove(this.activity);
-                return;
-            }
-        }
+//        if (Arrays.binarySearch(loginArr , position) >= 0 ) {
+//            if ( !this.csp.getValue("isLogin",false)) {
+//                this.g.loginMove(this.activity);
+//                return;
+//            }
+//        }
 
-        if (position == 0 || position == 3 || position == 5) {
+        if ( position == 0 || position == 6 ) {
+
             content.putExtra("content", true);
-        } else if ( position == 8 ) {
+
+        } else if ( position == 5 ) {
             Intent photo = new Intent(this.c, PhotoActivity.class);
             photo.putExtra("choice","99");
             this.c.startActivity(photo);
             return;
+
         } else if ( position == 1 ) {
             Intent bell = new Intent(c, GlanceActivity.class);
             a.startActivity(bell);
             a.overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left);
 
             return;
-        } /*else if (Arrays.binarySearch(loginArr, position) >= 0) {
-            if (!this.csp.getValue("isLogin", false)) {
-                this.g.loginMove(this.activity);
-                return;
-            }
-        }*/
+
+        } else if (position == 7) {
+            Intent voting = new Intent(c , VotingActivity.class);
+            a.startActivity(voting);
+
+            return;
+        }
 
         content.putExtra("paramUrl", this.g.mainUrls[position]);
         c.startActivity(content);

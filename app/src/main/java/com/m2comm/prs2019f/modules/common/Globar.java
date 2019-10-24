@@ -43,11 +43,11 @@ public class Globar {
     public String mainUrl = "http://ezv.kr";
     public String baseUrl = "http://ezv.kr/voting/php";
     public String contentMainUrl = "http://knpa.m2comm.co.kr";
-    public String contentUrl = "http://knpa.m2comm.co.kr/app/2019fall/php";
-    public String code = "knpa2019f";
-    public static String CONTENT_TITLE = "2019 추계학술대회";
+    public String contentUrl = "https://www.plasticsurgery.or.kr/workshop/prs2019/app";
+    public String code = "PRS2019";
+    public static String CONTENT_TITLE = "PRS 2019";
     public String userCodeUrl = "http://121.254.129.104/voting_0523/insert_device.asp";
-    public String eventCode = "knpa";
+    public String eventCode = "PRS2019";
     public String voting_ip = "121.254.129.104";
     public int voting_port = 13001;
 
@@ -258,9 +258,9 @@ public class Globar {
     }
 
     public String[] mainUrls = {
-            "/about/greetings.php", "/session/glance.php", "/abstract/category.php",
-            "/program/highlights.php", "/feedback/view.php?title=피드백", "/about/floor.php"
-            ,"/bbs/list.php?code="+this.code,"/booth/list.php?code="+this.code,""
+            "/message1.php", "/session/glance.php", "/session/list.php",
+            "/faculty/list.php", "/abstract/category.php", ""
+            ,"/location.php","","/booth/list.php"
     };
 
     public String[][] linkUrl = {

@@ -67,15 +67,17 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         this.header = new ArrayList<>();
 
         header.add(new GroupItem(R.drawable.side_m_1, "PRS KOREA 2019",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  인사말"), new ChildItem("•  환영연")))));
+                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("• Welcome Message"),
+                        new ChildItem("•  Overview")))));
 
         header.add(new GroupItem(R.drawable.side_m_2, "Program at a glance",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Program at a Glance"),
-                        new ChildItem("•  10월18일(금)")
-                        , new ChildItem("•  10월19일(토)")))));
+                new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_3, "Day Program",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  포맷별"), new ChildItem("•  주제별")))));
+                new ArrayList<ChildItem>(Arrays.asList(
+                        new ChildItem("• Nov. 8 (Fri)"),
+                        new ChildItem("• Nov. 9 (Sat)"),
+                        new ChildItem("• Nov. 10 (Sun)")))));
 
         header.add(new GroupItem(R.drawable.side_m_4, "Invited Speakers",
                 new ArrayList<ChildItem>()));
@@ -84,8 +86,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_6, "Photo Gallery",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  대회장 안내"), new ChildItem("•  오시는 길")
-                ))));
+                new ArrayList<ChildItem>());
 
         header.add(new GroupItem(R.drawable.side_m_7, "Location / Venue",
                 new ArrayList<ChildItem>()));
@@ -97,11 +98,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 new ArrayList<ChildItem>()));
 
         header.add(new GroupItem(R.drawable.side_m_10, "Notice",
-                new ArrayList<ChildItem>(Arrays.asList(new ChildItem("•  Plenary Speakers"),
-                        new ChildItem("•  Invited Speakers"),
-                        new ChildItem("•  Symposium Speakers"),
-                        new ChildItem("•  Traveling Fellows")
-                ))));
+                new ArrayList<ChildItem>());
 
         if (this.csp.getValue("sid","").equals("")) {
             this.loginIcon.setImageResource(R.drawable.btn_d_login1);
