@@ -31,9 +31,8 @@
                 android:layout_height="wrap_content"
                 app:w="50"
                 app:h="50"
+                android:scaleType="fitCenter"
                 app:img="@drawable/ic_menu"
-                app:imgW="50"
-                app:imgH="50"
                 />
 
             <com.m2comm.prs2019f.modules.customview.CustomImgView
@@ -41,6 +40,7 @@
                 android:id="@+id/top_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:scaleType="center"
                 app:w="120"
                 app:h="50"
                 app:img="@drawable/toplogo"
@@ -80,8 +80,7 @@
                 app:w="50"
                 app:h="50"
                 app:img="@drawable/ic_message"
-                app:imgW="50"
-                app:imgH="50"
+                android:scaleType="fitCenter"
                 />
 
         </LinearLayout>

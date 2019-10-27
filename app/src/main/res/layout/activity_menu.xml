@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     app:w="20"
                     app:h="20"
-                    app:img="@drawable/ic_meno"
+                    app:img="@drawable/ico_session"
                     android:layout_gravity="center_vertical"
                     />
                 <com.m2comm.prs2019f.modules.customview.CustomTextView

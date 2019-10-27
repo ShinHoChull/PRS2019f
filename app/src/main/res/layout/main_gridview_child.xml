@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
     android:orientation="vertical"
-    app:h="110"
+    app:h="100"
     app:w="110"
     >
     <com.m2comm.prs2019f.modules.customview.CustomView
@@ -21,7 +21,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         app:w="110"
-        app:h="110">
+        app:h="100">
 
         <com.m2comm.prs2019f.modules.customview.CustomImgView
             android:id="@+id/main_gridview_img"

@@ -46,7 +46,6 @@ public class CustomImgView extends android.support.v7.widget.AppCompatImageView 
             this.setImageBitmap(b);
             this.setScaleType(ScaleType.CENTER_INSIDE);
         } else {
-            this.setScaleType(ScaleType.CENTER_INSIDE);
             this.setImageResource(t.getResourceId(R.styleable.CustomImgView_img,R.mipmap.ic_launcher));
         }
 

@@ -36,7 +36,7 @@
                 <com.m2comm.prs2019f.modules.customview.CustomView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:h="5"
+                    app:h="10"
                     />
 
                 <com.m2comm.prs2019f.modules.customview.CustomFrameLayout
@@ -48,7 +48,7 @@
                 <com.m2comm.prs2019f.modules.customview.CustomView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:h="205"
+                    app:h="225"
                     />
 
                 <com.m2comm.prs2019f.modules.customview.CustomView
@@ -94,16 +94,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:w="360"
-                    app:h="360">
+                    android:layout_weight="1">
 
                     <com.m2comm.prs2019f.modules.customview.CustomGridView
                         android:id="@+id/main_grid"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:numColumns="3"
                         android:overScrollMode="never"
-                        app:h="360" />
+                         />
 
                 </com.m2comm.prs2019f.modules.customview.CustomView>
 
